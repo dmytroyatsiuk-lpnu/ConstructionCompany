@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager table</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="JS/manager.js" defer></script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="manager.html">Employee Management</a>
+    <a href="manager_information.html">Company Information</a>
+    <a href="manager_tasks.html">Tasks</a>
+  </div>
+  
+    <div class="sections-container">
+        <div class="section">
+          <h2>Employees</h2>
+          <table id="employeesTable">
+            <thead>
+              <tr>
+                <th>ПІБ</th>
+                <th>Дата найму</th>
+                <th>Зарплата (грн)</th>
+                <th>Посада</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <button class="add-button" onclick="showAddEmployeeForm()">+ Add Employee</button><br>
+          <button id="export_employees_tojson"> Export Employees to JSON</button>
+        </div>
+      
+        <div class="section">
+          <h2>Employees Brigade</h2>
+          <table id="employeesBrigadeTable">
+            <thead>
+              <tr>
+                <th>Робітник</th>
+                <th>Бригада</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+    </div>
+    
+
+    <div class="modal" id="add_employee_modal">
+        <div class="modal-content" id="add_employee_modal_content">
+            <input type="text" placeholder="Full name"><br>
+            <input type="date" placeholder="hire date"><br>
+            <input type="number" placeholder="salary"><br>
+            <input type="text" placeholder="position"><br>
+           
+            <select id="brigadeSelect">
+                <option value="">Select Brigade</option>
+            </select>
+
+            <button id="add_employee_button">Add Employee</button>
+            <button onclick="closeAddEmployeeModal()">Close</button>
+        </div>
+    </div>
+  </body>
+</html>

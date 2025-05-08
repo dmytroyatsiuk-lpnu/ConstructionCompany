@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Tables</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="JS/admin.js" defer></script>
+</head>
+<body>
+    <div class="header">Admin Panel</div>
+    <div id="admin_panel_div">
+        <div class="tiles-container" id="tiles-container"></div>
+        <div class="admin_buttons">
+            <button id="add_user_button">Add user</button>
+            <button onclick="openDeleteModal()" id="delete_user_button">Delete user</button>
+            <button id="edit_user_button">Edit user</button>
+            <button id="export_UserActionLogs_tojson"> Export UserActionLogs to JSON</button>
+        </div>
+    </div>
+
+
+
+    <!-- Modal --> 
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modal-content">
+            <h2 id="modal-title"></h2>
+            <div id="table-editor"></div>
+            <button onclick="closeModal()" id="modal_close_button">Close</button>
+        </div>
+    </div>
+
+    <div class="modal" id="add_user_modal">
+        <div class="modal-content" id="add_user_modal_content">
+            <!--username	password_hash	role	full_name	employee_id-->
+            <input type="text" placeholder="username"><br>
+            <input type="text" placeholder="password"><br>
+            <input type="text" placeholder="role"><br>
+            <input type="text" placeholder="full name"><br>
+            <input type="number" min="0" placeholder="id(optional)"><br>
+            <button>Add User</button>
+            <button onclick="closeAddUserModal()">Close</button>
+        </div>
+    </div>
+
+    <div class="modal" id="deleteModal">
+        <div class="modal-content">
+            <h3>Список користувачів</h3>
+            <div id="userList"></div>
+            <button onclick="closeDeleteModal()" id="delete_modal_close_button">Close</button>
+        </div>
+    </div>  
+
+    <!-- Edit User Modal -->
+    <div class="modal" id="edit_user_modal" style="display:none">
+        <div class="modal-content">
+            <h2>Edit User</h2>
+            <input type="text" id="edit_username" placeholder="Username (read-only)" readonly><br>
+            <input type="text" id="edit_password" placeholder="New Password"><br>
+            <input type="text" id="edit_role" placeholder="Role"><br>
+            <input type="text" id="edit_fullname" placeholder="Full Name"><br>
+            <input type="number" id="edit_employeeId" placeholder="Employee ID"><br>
+            <button onclick="submitEditUser()">Save Changes</button>
+            <button onclick="closeEditUserModal()">Close</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JS/manager_tasks.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Tasks</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="manager.html">Employee Management</a>
+        <a href="manager_information.html">Company Information</a>
+        <a href="manager_tasks.html">Tasks</a>
+    </div>
+    <div>
+        <div id="brigade_select_div">
+
+        </div>
+
+        <div id="tasksContainer">
+            <select id="brigadeSelect">
+                <option value="">Select Brigade</option>
+            </select>
+            <h2>Завдання бригади</h2>
+            <table id="tasksTable">
+                <thead>
+                    <tr>
+                        <th>Створено</th>
+                        <th>Дедлайн</th>
+                        <th>Опис</th>
+                        <th>Статус</th>
+                        <th>Зберегти</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button id="add_task_button" onclick="showAddTaskForm()">Add Task</button> 
+        </div>
+         
+    </div>
+
+    <div class="modal" id="add_task_modal">
+        <div class="modal-content" id="add_task_modal_content">
+            <label for="deadline_date_input">Deadline</label>
+            <input type="date" placeholder="Deadline" id="deadline_date_input"><br>
+            <input type="text" placeholder="Description"><br>
+            <select name="" id="">
+                <option value="todo">todo</option>
+                <option value="in_progress">in_progress</option>
+                <option value="done">done</option>
+            </select>
+
+
+            <button id="add_task_button_modal">Add Task</button>
+            <button onclick="closeAddTaskModal()">Close</button>
+        </div>
+    </div>
+</body>
+</html>

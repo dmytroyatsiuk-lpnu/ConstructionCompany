@@ -1,0 +1,229 @@
+/* Основні стилі */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+button {
+  width: fit-content;
+  padding: 10px 20px;
+}
+
+
+input:focus, select:focus, button:focus {
+  outline: none;
+  border-color: #024b9af2;
+}
+
+button {
+  background-color: #024b9af2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #013165f2;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+/* Навігація */
+.navbar {
+  background-color: #024b9af2;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Контейнер логіну */
+.log_in_fields {
+  max-width: 400px;
+  margin: 80px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Контейнери секцій */
+.sections-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Таблиці */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+table thead {
+  background-color: #024b9af2;
+  color: white;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Кнопки дій */
+.add-button {
+  background-color: #28a745;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+/* Модальні вікна */
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-height: 80vh;
+  max-width: 90vw;     /* не більше 90% ширини вікна */
+  width: auto;          /* автоматична ширина — залежить від вмісту */
+  min-width: 300px;     /* мінімум для гарного вигляду */
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Хедер */
+.header {
+  font-size: 2rem;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: #024b9af2;
+  color: white;
+  text-align: center;
+}
+
+.table-wrapper {
+  max-height: 400px; /* або будь-яка висота на твій розсуд */
+  overflow-y: auto;
+}
+
+.tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 20px 20px 20px;
+}
+
+.tile {
+    background-color: #e3e3e3;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.tile:hover {
+    background-color: #c0c0c0;
+}
+
+
+.admin_buttons{
+  margin-left: 20px;
+}
+
+#company_information, #admin_panel_div{
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff; /* бажано вказати фон, щоб тінь було видно */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#tasksContainer{
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff; /* бажано вказати фон, щоб тінь було видно */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+#company_information table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#company_information th,
+#company_information td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px;
+  border: 1px solid #000; /* або кольору за потребою */
+}
